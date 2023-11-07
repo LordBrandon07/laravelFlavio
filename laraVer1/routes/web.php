@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\CountryController;
+use App\Models\Country;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,10 +16,6 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
-});
-
-Route::get('/index', function () {
     return view('index');
 });
 
@@ -25,6 +23,11 @@ Route::get('/colombia', function () {
     return view('./pruebas/colombia');
 });
 
-Route::get('/store', function () {
-    return view('./country/store');
-});
+// Route::get('/create', function () {
+//     return view('./country/create');
+// });
+
+Route::get('/country', [CountryController::class, 'index'])->name('country.index');
+Route::get('/country/create', [CountryController::class, 'create'])->name('country.create');
+
+Route::post('/country/store', [CountryController::class, 'store'])->name('country.store');

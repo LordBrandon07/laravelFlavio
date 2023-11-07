@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Country;
 use Illuminate\Http\Request;
+use App\Models\Country;
 
 class CountryController extends Controller
 {
@@ -22,4 +22,13 @@ class CountryController extends Controller
         return redirect()->back()
             ->with('success', 'pais creado correctamente');
     }
+    public function create() {
+        return view('country.create');
+    }
+
+    public function index() {
+        return view('country.index');
+    }
+    
+
 };
