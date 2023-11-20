@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Roles;
+use app\Models\User;
 use Illuminate\Http\Request;
 
-class RolesController extends Controller
+class UsersController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -20,7 +20,7 @@ class RolesController extends Controller
      */
     public function create()
     {
-        return view('roles/create');
+        return view('users/create');
     }
 
     /**
@@ -28,7 +28,7 @@ class RolesController extends Controller
      */
     public function store(Request $request){
 
-        Roles::create(
+        User::create(
             $request->all()
         );
 
@@ -36,11 +36,10 @@ class RolesController extends Controller
             ->with('success', 'creado correctamente');
     } 
 
-
     /**
      * Display the specified resource.
      */
-    public function show(Roles $roles)
+    public function show(string $id)
     {
         //
     }
@@ -48,7 +47,7 @@ class RolesController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Roles $roles)
+    public function edit(string $id)
     {
         //
     }
@@ -56,7 +55,7 @@ class RolesController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Roles $roles)
+    public function update(Request $request, string $id)
     {
         //
     }
@@ -64,7 +63,7 @@ class RolesController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Roles $roles)
+    public function destroy(string $id)
     {
         //
     }
