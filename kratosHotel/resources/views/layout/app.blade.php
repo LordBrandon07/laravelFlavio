@@ -11,9 +11,10 @@
     <header class="d-flex justify-content-center py-3">
       <ul class="nav nav-pills">
         <li class="nav-item"><a href="/" class="nav-link active" aria-current="page">Inicio</a></li>
-        <li class="nav-item"><a href="#" class="nav-link">Ocupaciones</a></li>
-        <li class="nav-item"><a href="#" class="nav-link">Cargos</a></li>
-        <li class="nav-item"><a href="#" class="nav-link">Profesiones</a></li>
+        <li class="nav-item"><a href="../roles/create" class="nav-link">Roles</a></li>
+        <li class="nav-item"><a href="../users/create" class="nav-link">Usuario</a></li>
+        <li class="nav-item"><a href="../customer/create" class="nav-link">Clientes</a></li>
+        <li class="nav-item"><a href="../employee/create" class="nav-link">Empleados</a></li>
       </ul>
     </header>
   </div>

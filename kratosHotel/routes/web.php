@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\CustomerController;
+use App\Http\Controllers\EmployeeController;
 use App\Http\Controllers\RolesController;
 use App\Http\Controllers\UsersController;
 use Illuminate\Support\Facades\Route;
@@ -16,9 +18,11 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('index');
 });
 
 
 Route::resource("/roles", RolesController::class);
 Route::resource("/users", UsersController::class);
+Route::resource("/customer", CustomerController::class);
+Route::resource("/employee", EmployeeController::class);
